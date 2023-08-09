@@ -308,15 +308,11 @@ for (var i = 1; i < carsInfo.length; i++) {
     var newOption = document.createElement("option");
     newOption.value = i;
     newOption.textContent = carsInfo[i].nome + " - " + carsInfo[i].ano
-
     carForm.add(newOption);
 }
 
 carForm.addEventListener("change", (event) => {
-
-
     let selectedCar = carsInfo[event.target.value];
-
     document.getElementById("carName").innerText = "Nome: " + selectedCar.nome;
     document.getElementById("carYear").innerText = "Ano: " + selectedCar.ano;
     document.getElementById("carKml").innerText = "Km/L: " + selectedCar.kmporlitro;
